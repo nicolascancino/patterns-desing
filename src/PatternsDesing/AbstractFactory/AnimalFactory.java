@@ -1,19 +1,21 @@
 package PatternsDesing.AbstractFactory;
 
 import PatternsDesing.AbstractFactory.Factories.Animal;
+import PatternsDesing.AbstractFactory.Factories.Persona;
 import PatternsDesing.AbstractFactory.Factories.impl.Cat;
 import PatternsDesing.AbstractFactory.Factories.impl.Dog;
 import PatternsDesing.AbstractFactory.Factories.impl.Mouse;
 
 public class AnimalFactory extends AbstractFactory {
 
-    public Animal getAnimal(String animal){
 
-        if(animal.equals("Dog")){
+    @Override
+    Animal getAnimalFactory(String tipo) {
+        if(tipo.equals("Dog")){
             return new Dog();
-        }else if(animal.equals("Cat")){
-            return new Cat();
-        }else if(animal.equals("Mouse")){
+        }else if(tipo.equals("Cat")){
+            return  new Cat();
+        }else if(tipo.equals("Mouse")){
             return new Mouse();
         }else {
             return null;
@@ -21,7 +23,7 @@ public class AnimalFactory extends AbstractFactory {
     }
 
     @Override
-    AbstractFactory get() {
+    Persona getPersonaFactory(String tipo) {
         return null;
     }
 }
