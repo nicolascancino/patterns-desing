@@ -1,5 +1,6 @@
 package PatternsDesing.AbstractFactory;
 
+import PatternsDesing.AbstractFactory.Factories.Animal;
 import PatternsDesing.AbstractFactory.Factories.Persona;
 import PatternsDesing.AbstractFactory.Factories.impl.Hijo;
 
@@ -7,7 +8,7 @@ public class PersonaFactory extends AbstractFactory {
 
 
     @Override
-    PatternsDesing.AbstractFactory.Factories.Animal getAnimalFactory(String tipo) {
+    Animal getAnimalFactory(String tipo) {
         return null;
     }
 
